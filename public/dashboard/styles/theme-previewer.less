@@ -6,6 +6,7 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @import "../bower_components/impac-angular/dist/impac-angular.less";
+@import "../bower_components/transac/dist/transac.less";
 // endbower
 
 /**
@@ -1983,6 +1984,14 @@ form.editable-wrap .editable-controls input {
   }
   .marketplace-app-card:hover .arrow {
     visibility: visible;
+  }
+}
+
+#reconcile {
+  transac {
+    display: block;
+    margin-bottom: 60px;
+    .top-buffer-4();
   }
 }
 
