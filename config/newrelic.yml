@@ -43,6 +43,10 @@ test:
   # It doesn't make sense to report to New Relic from automated test runs.
   monitor_mode: false
 
+sit:
+  <<: *default_settings
+  app_name: MNOE Demo (SIT)
+
 uat:
   <<: *default_settings
   app_name: MNOE Demo (UAT)
