@@ -2,10 +2,14 @@
 # yarn lockfile v1
 
 
-"impac-angular@git+https://git@github.com/maestrano/impac-angular.git#1.5.0-rc2":
-  version "1.5.0-rc2"
-  resolved "git+https://git@github.com/maestrano/impac-angular.git#8fb4f240f523fd67d48638fff2593edd1b5662a6"
+"impac-angular@git+https://git@github.com/maestrano/impac-angular.git#1.5.0-rc4":
+  version "1.5.0-rc4"
+  resolved "git+https://git@github.com/maestrano/impac-angular.git#fff26392ddc0d82215224e24f2a8b4ee39b90c27"
 
-"mno-enterprise-angular@git+https://git@github.com/maestrano/mno-enterprise-angular.git#master":
+"mno-enterprise-angular@git+https://git@github.com/xaun/mno-enterprise-angular.git#feature/transac-reconcile":
   version "0.0.0"
-  resolved "git+https://git@github.com/maestrano/mno-enterprise-angular.git#726f1d8178e96870be4989941b86e6fba23668dd"
+  resolved "git+https://git@github.com/xaun/mno-enterprise-angular.git#2c58001fa68706d3089c9b89f8f8797e26441a73"
+
+"transac@git+https://git@github.com/xaun/transac.git#master":
+  version "0.1.0"
+  resolved "git+https://git@github.com/xaun/transac.git#ccda873e4e9c693033e19ac2e3e5eb31d25ca57d"

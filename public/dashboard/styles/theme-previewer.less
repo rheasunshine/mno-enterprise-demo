@@ -6,6 +6,7 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @import "../bower_components/impac-angular/dist/impac-angular.less";
+@import "../bower_components/transac/dist/transac.less";
 // endbower
 
 /**
@@ -209,6 +210,7 @@ html, body {
 @dashboard-cpy-select-bg-color:                 @bg-inverse-color;
 @dashboard-cpy-select-border-radius:            0 0 0 6px;
 @dashboard-cpy-select-border-color:             @text-inverse-color;
+@dashboard-cpy-select-list-border-color:        lighten(@bg-inverse-color, 10%);
 
 @dashboard-cpy-select-header-text-bold-color:   @text-inverse-color;
 @dashboard-cpy-select-header-text-color:        @text-inverse-color;
@@ -454,6 +456,7 @@ html, body {
 @input-color:                   @text-strong-color;
 @input-color-placeholder:       @input-color;
 @input-label-color:             @text-inverse-color;
+@deletion-sentence-color:       @brand-danger;
 
 
 
@@ -834,6 +837,7 @@ dashboard-company-selectbox {
     border-left: 1px solid @dashboard-cpy-select-border-color;
     border-bottom: 1px solid @dashboard-cpy-select-border-color;
     z-index: 999;
+    overflow: hidden;
 
     @media (max-width: @screen-sm) {
       border-radius: 0;
@@ -878,7 +882,8 @@ dashboard-company-selectbox {
 
     // Section visible when change company is clicked
     .box-content {
-      border-top: solid 1px @dashboard-cpy-select-link-color;
+      border-top: solid 1px @dashboard-cpy-select-list-border-color;
+      overflow: hidden;
 
       // General look of the links
       a {
@@ -931,7 +936,7 @@ dashboard-company-selectbox {
         color: @dashboard-cpy-select-link-color;
         padding: 10px 20px;
         text-align: left;
-        border-top: 1px solid @dashboard-cpy-select-border-color;
+        border-top: 1px solid @dashboard-cpy-select-list-border-color;
 
         .btn {
           width: 100%;
@@ -949,10 +954,6 @@ dashboard-company-selectbox {
           text-decoration: none;
           color: @dashboard-cpy-select-link-hover-color;
           background-color: @dashboard-cpy-select-link-hover-bg-color;
-
-          &:last-child {
-            border-bottom-left-radius: 5px;
-          }
         }
       }
     }
@@ -1805,6 +1806,10 @@ form.editable-wrap .editable-controls input {
     h2 {
       margin-top: 0;
     }
+
+    img {
+      max-width: 100%;
+    }
   }
 
   //-------------------------------
@@ -1986,6 +1991,14 @@ form.editable-wrap .editable-controls input {
   }
 }
 
+#reconcile {
+  transac {
+    display: block;
+    margin-bottom: 60px;
+    .top-buffer-4();
+  }
+}
+
 #app-connect-modal {
 
   select {
@@ -1996,6 +2009,12 @@ form.editable-wrap .editable-controls input {
   button[type="submit"] {
     display: block;
     margin: auto;
+  }
+}
+
+.app-deletion-modal {
+  .deletion-sentence {
+    color: @brand-danger;
   }
 }
 
@@ -2054,6 +2073,12 @@ form.editable-wrap .editable-controls input {
       display: flex;
       align-content: center;
       justify-content: space-around;
+    }
+
+    .app-deletion {
+      .deletion-sentence {
+        color: @deletion-sentence-color;
+      }
     }
   }
 }
