@@ -12,4 +12,4 @@
 
 "transac@git+https://git@github.com/xaun/transac.git#master":
   version "0.1.0"
-  resolved "git+https://git@github.com/xaun/transac.git#505aaa8b375c6723e597df0c560097748000fa6f"
+  resolved "git+https://git@github.com/xaun/transac.git#91a29b915bc9ad6729c6fbcbd36a3cbee71e07b2"
