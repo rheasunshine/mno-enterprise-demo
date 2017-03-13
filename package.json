@@ -4,6 +4,6 @@
   "dependencies": {
     "impac-angular": "git+https://git@github.com/maestrano/impac-angular.git#1.5.0-rc4",
     "mno-enterprise-angular": "git+https://git@github.com/xaun/mno-enterprise-angular.git#feature/transac-reconcile",
-    "transac": "^0.1.1"
+    "transac": "git+https://git@github.com/xaun/transac.git#master"
   }
 }
