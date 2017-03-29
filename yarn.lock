@@ -7,9 +7,9 @@
   resolved "git+https://git@github.com/maestrano/impac-angular.git#fff26392ddc0d82215224e24f2a8b4ee39b90c27"
 
 "mno-enterprise-angular@git+https://git@github.com/xaun/mno-enterprise-angular.git#feature/transac-reconcile":
-  version "0.0.0"
-  resolved "git+https://git@github.com/xaun/mno-enterprise-angular.git#2d4cdf6338afb008ed7c10e46339e4eeb698052e"
+  version "1.0.0"
+  resolved "git+https://git@github.com/xaun/mno-enterprise-angular.git#37e200e5f9a3b3d5a20cef581f6af056ba02431c"
 
 "transac@git+https://git@github.com/xaun/transac.git#master":
   version "0.1.0"
-  resolved "git+https://git@github.com/xaun/transac.git#9b72916167a33bbd50deb8bc1f532b82766b14eb"
+  resolved "git+https://git@github.com/xaun/transac.git#4067102d22801f8407901adbbe208febdf50f1e4"
