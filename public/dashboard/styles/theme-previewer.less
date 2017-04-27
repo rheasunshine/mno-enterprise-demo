@@ -6,6 +6,7 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @import "../bower_components/impac-angular/dist/impac-angular.less";
+@import "../bower_components/mno-ui-elements/dist/mno-ui-elements.less";
 // endbower
 
 /**
@@ -591,6 +592,50 @@ html, body {
     .container {
       width: @container-lg - @menu-left-width;
     }
+  }
+}
+
+.connect-apps-panel {
+
+  .connect-apps-table {
+    overflow-x: scroll;
+
+    th, td {
+      min-width: 50px;
+      border: none;
+    }
+    
+    h4 {
+      color: @text-strong-color;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    img.media-object {
+      max-width: 140px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  .connect-apps-wrap {
+    margin-top: 20px;
+  }
+
+  .table-bordered {
+    border: none; 
+  }
+
+  .bottom-align-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .data-sync-info {
+    overflow: auto;
   }
 }
 
@@ -1218,6 +1263,20 @@ dashboard-menu {
   }
 }
 
+#app-features {
+  border: 1px solid @text-strong-color;
+
+  .top-space {
+    margin-top: 5px;
+  }
+
+  .btn-default {
+    color: @text-strong-color;
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
 mno-audit-events-list {
   .table > thead > tr {
     color: @table-cell-header-text-color;
@@ -1233,6 +1292,45 @@ mno-audit-events-list {
       background-color: @table-cell-row-odd-bg-color
     }
   }
+}
+
+.data-sync-panel {
+
+  .data-sync-table {
+    overflow-x: scroll;
+
+    th, td {
+      min-width: 50px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    img.media-object {
+      max-width: 60px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  .data-sync-wrap {
+    margin-top: 20px;
+  }
+  
+  .bottom-align-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .data-sync-info {
+    overflow: auto;
+  }
+}
+
+#wizard-end{
+
 }
 
 mno-impersonation-bar {
@@ -1311,6 +1409,95 @@ mno-pagination {
 
 mno-password {
   display: block;
+}
+
+#select-app {
+  .select-app-marketplace {
+
+    .recommendation-sentence {
+      color: @brand-danger;
+    }
+    
+    .wrapper-box {
+      width: 99%;
+    }
+
+    .element-left {
+      max-width: 150px;
+      float: left;
+      height: 30px;
+      margin-top: 0px;
+    }
+
+    .apps-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .app-icon {
+        max-width: 120px;
+        margin: 10px;
+
+        .app-icon-wrapper {
+          position: relative;
+
+          .app-logo {
+            width: 100%;
+          }
+
+          .checked {
+            position: absolute;
+            border-radius: 6px;
+            background-color: rgba(47, 228, 50, 0.3);
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            // Center the tick
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }      
+        }
+
+        .info-btn{
+          border: none;
+          background-color: transparent;
+        }
+                
+        .app-title {
+          text-align: center;
+          margin-top: 5px;
+          .ellipsis;
+        }
+      }
+    }
+  }
+}
+
+#welcome{
+  .number-circle {
+    border-radius: 50%;
+    width: 43px;
+    height: 43px;
+    padding: 8px;
+    background: #fff;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    font: 20px Arial, sans-serif;
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
+  .centered {
+    display: table;
+    table-layout: fixed;
+  }
+  .content {
+    position: relative;
+    left:40%;
+  }
 }
 
 average-star-rating, star-rating {
@@ -2347,6 +2534,53 @@ form.editable-wrap .editable-controls input {
   }
 }
 
+#wizard {
+
+  padding: 80px;
+
+  .main-box {
+    position: relative;
+    border: solid 1px;
+    background: @bg-on-bg-inverse-color;
+    height:545px;
+    width: 71%;
+    margin: 0 auto;
+    padding: 20px;
+    resize: both;
+    overflow: auto;
+  }
+
+  .btn.btn-default {
+    color: @text-strong-color;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent, transparent);
+    border-color: transparent transparent transparent;
+  }
+  .btn.btn-default:hover {
+    color: @text-strong-color;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent, transparent);
+    border-color: transparent transparent transparent;
+  }
+
+  .move-right {
+    padding-right: 0px;
+  }
+
+  .glyphicon {
+    font-size: 18px;
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 #app-connect-modal {
 
   select {
@@ -2592,6 +2826,76 @@ form.editable-wrap .editable-controls input {
     background-color: white;
   }
 }
+
+//-------------------------------
+// Show View
+//-------------------------------
+.app-info {
+
+  //-------------------------------
+  // Header
+  //-------------------------------
+  .row-header .media-object {
+    max-width: 80px;
+    border-radius: 5px;
+    border: solid 1px @bg-main-color;
+    margin-left: 28px;
+  }
+
+  .row-header .media-body h2 {
+    line-height: 80px;
+    color: @dashboard-marketplace-show-header-text-color;
+  }
+  .position-left-element {
+    float: left;
+    width: 80%;
+    min-height: 200px;
+  }
+ 
+  .position-right-top-element {
+    width: 20%;
+    float: right;
+  }
+
+  a {
+    color: @text-inverse-strong-color;
+  }
+
+  .position-right-bottom-element {
+    width: 20%;
+    float: right;
+    margin-bottom: 20px;
+  }
+
+  blockquote {
+    overflow-wrap: break-word;
+  }
+
+  //-------------------------------
+  // Content - General
+  //-------------------------------
+  .row-content .well {
+    color: @dashboard-marketplace-show-sections-text-color;
+    background-color: @dashboard-marketplace-show-sections-bg-color;
+    border: none;
+    border-radius: 2px;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    img {
+      .img-responsive;
+    }
+
+    .loading-icon {
+      font-size: 40px;
+      color: @dashboard-marketplace-show-header-text-color;
+      text-align: center;
+    }
+  }
+}
+
 
 // Custom fonts
 // The @font-path variable is defined in frontend/src/app/stylesheets/variables.less
