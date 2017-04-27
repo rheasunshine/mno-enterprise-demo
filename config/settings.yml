@@ -27,3 +27,6 @@ reviews:
 marketplace:
   comparison:
     enabled: true
+# Display the onboarding wizard
+onboarding_wizard:
+  enabled: true
