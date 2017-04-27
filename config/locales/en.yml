@@ -20,4 +20,47 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  mno_enterprise:
+    templates:
+      app_feature:
+        single_sign_on: Single Sign-on
+        single_billing: Single billing
+        data_sharing: Data-sharing
+      onboarding:
+        connect_app_wizard:
+          connect_app: Connect
+          free_trial: " days free trial"
+        mno_welcome_wizard:
+          welcome: "Welcome to Maestrano"
+          intro: "Lorem ipsum dolor sit amet, sumo mundi cum an, eum nonumy luptatum ei. Nam te eros dolorum disputationi, ea quaeque vocibus rationibus sea, eu mel enim instructior. Nec diceret legendos intellegat ei. Invenire scribentur ex mea.Qui ad graecis deterruisset, ius debitis convenire urbanitas ad. No duo minim libris. Eu suas adipisci mea, mei ludus expetendis ullamcorper et. Aeque nemore et mei, iuvaret expetendis ei vim. Et putant gubergren eum, mel vidisse delectus cu, has at voluptua appetere.Nec id audiam appetere, ex tollit ancillae cotidieque ius. Mei assum suscipit vivendum et, pericula periculis efficiantur quo ex. Has ei voluptua assueverit. Vitae virtute sea te, ius enim principes eu. Sumo hinc no sed. Vis in falli invenire petentium.Mea id delenit utroque inermis. Nec natum augue probatus no, rebum liber et vim. Harum laudem ponderum mea ad, oratio assueverit duo eu. At quo exerci definitionem. Iuvaret eripuit mei an, duo persecuti referrentur ne, solet gubergren ne mea. In vel recteque vulputate.Ex regione debitis facilisis qui. Has at vivendo conclusionemque, nec cu odio philosophia, munere utroque dissentias nam id. Vis id eius ancillae fabellas, nisl partiendo intellegam no quo. Tamquam pertinacia eum id. Et saperet assentior reprimique est, no has iuvaret volutpat. Mei esse nusquam adolescens et, has ne adhuc tincidunt cotidieque."
+          one: "1"
+          two: "2"
+          three: "3"
+          select_app: "Select the application you want to connect"
+          connect_app: "Set-up the connection"
+          discover: "Discover your account"
+          next: "Next"
+          finish: "Finish"
+        select_your_app:
+          app_logo: "{{app}} logo"
+          select_application: "1. Select the application you want to connect"
+          select_application_step_bar: "select your application"
+          discover_your_account: "discover your account"
+          connect_app: "connect your application"
+          connect_applications: "2. Connect your applications"
+          we_recommend: "We do not recommend more than 4 apps to start"
+          categories: "categories"
+          min_apps: "In order to continue you must select a minimum of 1 app and a maximum of 4 apps"
+          search: "search"
+        data_sync:
+          contacts: "Contacts"
+          invoices: "Invoices"
+          journals: "Journals"
+          employees: "Employess"
+          opportunities: "Opportunities"
+          what_data: "What data will be synchronised"
+          start: "Start visualise the data synchronised by your applications by selecting one by clicking on its icon."
+          learn_more: "Learn more on how Maestrano synchronise data between your applications."
+        end_wizard:
+          almost_there: "almost there"
+          almost_ready: "Your account is almost ready !"
