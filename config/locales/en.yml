@@ -34,7 +34,6 @@ en:
         connect_apps:
           launch_app: "Launch"
           connect: "Connect"
-        connect_applications: "Step 2. Connect your applications"
         connect_app_wizard:
           connect_app: Connect
           free_trial: " days free trial"
@@ -56,6 +55,7 @@ en:
         select_your_app:
           app_logo: "{{app}} logo"
           select_application: "Step 1. Select the application you want to connect"
+          connect_applications: "Step 2. Connect your applications"
           we_recommend: "We do not recommend more than 4 apps to start"
           categories: "categories"
           min_apps: "In order to continue you must select a minimum of 1 app and a maximum of 4 apps"
