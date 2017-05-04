@@ -27,9 +27,21 @@ en:
         single_billing: Single billing
         data_sharing: Data-sharing
       onboarding:
+        welcome: "welcome"
+        select_application_step_bar: "select your application"
+        discover_your_account: "discover your account"
+        connect_app: "connect your application"
+        connect_apps:
+          launch_app: "Launch"
+          connect: "Connect"
+        connect_applications: "Step 2. Connect your applications"
         connect_app_wizard:
           connect_app: Connect
           free_trial: " days free trial"
+          what_is: "What is "
+          how_is: "How is "
+          integrated: " integrated to Maestrano?"
+          what_is_shared: "What data is shared with "
         mno_welcome_wizard:
           welcome: "Welcome to Maestrano"
           intro: "Lorem ipsum dolor sit amet, sumo mundi cum an, eum nonumy luptatum ei. Nam te eros dolorum disputationi, ea quaeque vocibus rationibus sea, eu mel enim instructior. Nec diceret legendos intellegat ei. Invenire scribentur ex mea.Qui ad graecis deterruisset, ius debitis convenire urbanitas ad. No duo minim libris. Eu suas adipisci mea, mei ludus expetendis ullamcorper et. Aeque nemore et mei, iuvaret expetendis ei vim. Et putant gubergren eum, mel vidisse delectus cu, has at voluptua appetere.Nec id audiam appetere, ex tollit ancillae cotidieque ius. Mei assum suscipit vivendum et, pericula periculis efficiantur quo ex. Has ei voluptua assueverit. Vitae virtute sea te, ius enim principes eu. Sumo hinc no sed. Vis in falli invenire petentium.Mea id delenit utroque inermis. Nec natum augue probatus no, rebum liber et vim. Harum laudem ponderum mea ad, oratio assueverit duo eu. At quo exerci definitionem. Iuvaret eripuit mei an, duo persecuti referrentur ne, solet gubergren ne mea. In vel recteque vulputate.Ex regione debitis facilisis qui. Has at vivendo conclusionemque, nec cu odio philosophia, munere utroque dissentias nam id. Vis id eius ancillae fabellas, nisl partiendo intellegam no quo. Tamquam pertinacia eum id. Et saperet assentior reprimique est, no has iuvaret volutpat. Mei esse nusquam adolescens et, has ne adhuc tincidunt cotidieque."
@@ -43,11 +55,7 @@ en:
           finish: "Finish"
         select_your_app:
           app_logo: "{{app}} logo"
-          select_application: "1. Select the application you want to connect"
-          select_application_step_bar: "select your application"
-          discover_your_account: "discover your account"
-          connect_app: "connect your application"
-          connect_applications: "2. Connect your applications"
+          select_application: "Step 1. Select the application you want to connect"
           we_recommend: "We do not recommend more than 4 apps to start"
           categories: "categories"
           min_apps: "In order to continue you must select a minimum of 1 app and a maximum of 4 apps"
