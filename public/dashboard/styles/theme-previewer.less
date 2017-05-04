@@ -37,6 +37,10 @@ html, body {
   min-height:100%;
 }
 
+.onboarding-helper {
+  height: 100%;
+}
+
 // Spacers
 @top-buffer-height: @grid-gutter-width/2;
 .top-buffer-1 { margin-top: @top-buffer-height; }
@@ -493,6 +497,48 @@ html, body {
 @question-bg:                    @bg-on-bg-inverse-color;
 @question-ribbon-bg:             @bg-on-bg-inverse-color;
 
+/*-----------------------------------------------------------------------*/
+/*                           Onboarding                                  */
+/*-----------------------------------------------------------------------*/
+// Layout
+//--------------------------------------
+@onboarding-background:                    @bg-on-bg-inverse-color;
+@onboarding-next-button-color:             @decorator-main-color;
+@onboarding-next-button-color-background:  transparent;
+@onboarding-title-weight:                  bold;
+@onboarding-title-color:                   @text-strong-color;
+@onboarding-txt-color:                     @text-strong-color;
+
+// Welcome
+//--------------------------------------
+@onboarding-welcome-number-color:          @decorator-main-color;
+@onboarding-welcome-number-border-color:   @decorator-main-color;
+@onboarding-welcome-steps-color:           @text-strong-color;
+@onboarding-welcome-steps-weight:          bold;
+
+// Select apps marketplace
+//--------------------------------------
+@onboarding-select-app-marketplace-search:                   @text-strong-color;
+@onboarding-select-app-marketplace-warning-sentence-color:   @brand-danger;
+@onboarding-select-app-marketplace-tile-txt-color:           @decorator-main-color;
+@onboarding-select-app-marketplace-tile-icon-color:          @decorator-main-color;
+@onboarding-select-app-marketplace-tile-check-color:         rgba(47, 228, 50, 0.3);
+
+// Select apps data sync
+//--------------------------------------
+@onboarding-data-sync-title:                                 @text-strong-color;
+@onboarding-data-sync-app-name-color:                        @decorator-main-color;
+@onboarding-data-sync-app-name-weight:                       normal;
+@onboarding-data-sync-cross-icon:                            @brand-danger;
+@onboarding-data-sync-ok-icon:                               @brand-success;
+@onboarding-data-sync-section-color:                         @text-strong-color;
+@onboarding-data-sync-section-weight:                        bold;
+
+// Connect apps
+//--------------------------------------
+@onboarding-connect-apps-app-name-weight:                    bold;
+@onboarding-connect-apps-app-name-color:                     @decorator-main-color;
+
 
 
 .font(@size, @weight, @color) {
@@ -595,29 +641,45 @@ html, body {
   }
 }
 
-.connect-apps-panel {
-
-  .connect-apps-table {
-    overflow-x: scroll;
-
-    th, td {
-      min-width: 50px;
-      border: none;
-    }
+#connect-apps-panel {
+  min-height: 85%;
+  max-height: 85%;
+  min-width: 90%;
+  overflow: auto;
     
+  .title {
+    font-weight: @onboarding-title-weight;
+    color: @onboarding-title-color; 
+  }
+
+  .apps-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app-container {
+    flex-grow: 1;
+    width: 200px;
+    margin: 10px;
+
     h4 {
-      color: @text-strong-color;
+      color: @onboarding-connect-apps-app-name-color;
+      font-weight: @onboarding-connect-apps-app-name-weight;
     }
+  }
 
-    ul {
-      padding-left: 20px;
-    }
-
-    img.media-object {
-      max-width: 140px;
-      height: auto;
-      margin: 0 auto;
-    }
+  img.media-object {
+    max-width: 140px;
+    height: auto;
+    margin: 0 auto;
   }
 
   .connect-apps-wrap {
@@ -636,6 +698,16 @@ html, body {
   
   .data-sync-info {
     overflow: auto;
+  }
+
+  .btn-primary {
+    color: @text-inverse-strong-color;
+    background-color: @brand-warning;
+    border-color: @brand-warning;
+  }
+  
+  .btn-primary:hover {
+    background-color: darken(@brand-warning, 10%);
   }
 }
 
@@ -1266,14 +1338,9 @@ dashboard-menu {
 #app-features {
   border: 1px solid @text-strong-color;
 
-  .top-space {
-    margin-top: 5px;
-  }
-
-  .btn-default {
-    color: @text-strong-color;
-    background-color: transparent;
-    border-color: transparent;
+  .center-element {
+    margin-left: 10px;
+    margin-bottom: 12px;
   }
 }
 
@@ -1307,6 +1374,16 @@ mno-audit-events-list {
       padding-left: 20px;
     }
 
+    h5 {
+      color: @onboarding-data-sync-app-name-color;
+      font-weight: @onboarding-data-sync-app-name-weight;
+    }
+
+    .section-name {
+      color: @onboarding-data-sync-section-color;
+      font-weight: @onboarding-data-sync-section-weight;
+    }
+
     img.media-object {
       max-width: 60px;
       height: auto;
@@ -1314,8 +1391,24 @@ mno-audit-events-list {
     }
   }
 
+  .glyphicon-remove {
+    color: @onboarding-data-sync-cross-icon;
+  }
+  
+  .glyphicon-ok {
+    color: @onboarding-data-sync-ok-icon;
+  }
+  
+  .subtitle {
+    color: @onboarding-data-sync-title;   
+  }
+  
   .data-sync-wrap {
     margin-top: 20px;
+  }
+
+  .paragraph {
+    color: @onboarding-txt-color;
   }
   
   .bottom-align-text {
@@ -1330,7 +1423,20 @@ mno-audit-events-list {
 }
 
 #wizard-end{
+  min-height: 85%;
+  max-height: 85%;
+  min-width: 90%;
 
+  .title {
+    font-weight: @onboarding-title-weight;
+    color: @onboarding-title-color; 
+  }
+
+  .center-paragraph {
+    color: @onboarding-txt-color;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }
 
 mno-impersonation-bar {
@@ -1412,26 +1518,38 @@ mno-password {
 }
 
 #select-app {
+  min-height: 80%;
+  max-height: 80%;
+  min-width: 90%;
+
   .select-app-marketplace {
+    width: 99%;
 
     .recommendation-sentence {
-      color: @brand-danger;
+      color: @onboarding-select-app-marketplace-warning-sentence-color;
     }
-    
-    .wrapper-box {
-      width: 99%;
+
+    .input-sm {
+      color: @onboarding-select-app-marketplace-search;
     }
 
     .element-left {
       max-width: 150px;
       float: left;
-      height: 30px;
       margin-top: 0px;
     }
 
+    .form-control {
+      color: @onboarding-select-app-marketplace-search;
+    }
+    
     .apps-container {
       display: flex;
       flex-wrap: wrap;
+
+      i.fa {
+        color: @onboarding-select-app-marketplace-tile-icon-color;
+      }
 
       .app-icon {
         max-width: 120px;
@@ -1447,12 +1565,11 @@ mno-password {
           .checked {
             position: absolute;
             border-radius: 6px;
-            background-color: rgba(47, 228, 50, 0.3);
+            background-color: @onboarding-select-app-marketplace-tile-check-color;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
-
             // Center the tick
             display: flex;
             align-items: center;
@@ -1466,8 +1583,8 @@ mno-password {
         }
                 
         .app-title {
-          text-align: center;
-          margin-top: 5px;
+          margin-top: 4px;
+          color: @onboarding-select-app-marketplace-tile-txt-color;
           .ellipsis;
         }
       }
@@ -1476,24 +1593,49 @@ mno-password {
 }
 
 #welcome{
+  min-height: 85%;
+  max-height: 85%;
+  min-width: 90%;
+
   .number-circle {
     border-radius: 50%;
     width: 43px;
     height: 43px;
     padding: 8px;
     background: #fff;
-    border: 2px solid black;
-    color: black;
+    border: 2px solid @onboarding-welcome-number-border-color;
+    color: @onboarding-welcome-number-color;
     text-align: center;
     font: 20px Arial, sans-serif;
+    font-weight: bold;
     display: inline-block;
     vertical-align: middle;
     float: none;
   }
+  
+  .steps {
+    display: inline-block;
+    font-weight: @onboarding-welcome-steps-weight; 
+    color: @onboarding-welcome-steps-color;
+    padding-left: 5px;
+  }
+
+  .title {
+    font-weight: @onboarding-title-weight;
+    color: @onboarding-title-color; 
+  }
+
   .centered {
     display: table;
     table-layout: fixed;
   }
+
+  .center-paragraph {
+    color: @onboarding-txt-color;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
   .content {
     position: relative;
     left:40%;
@@ -2535,30 +2677,55 @@ form.editable-wrap .editable-controls input {
 }
 
 #wizard {
-
-  padding: 80px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
   .main-box {
-    position: relative;
-    border: solid 1px;
-    background: @bg-on-bg-inverse-color;
-    height:545px;
-    width: 71%;
-    margin: 0 auto;
-    padding: 20px;
-    resize: both;
-    overflow: auto;
+    width: 90%;
+    height: 80%;
+    max-height: 80%;
+    margin-top: -100px;
+    background: @onboarding-background;
+    border: solid 1px black;
+    display: flex;
+
+    & > div[on-finish] {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+    }
+    
+    & .steps {
+      flex-grow: 1;
+    }
+
+    & .step {
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
   }
 
-  .btn.btn-default {
-    color: @text-strong-color;
-    background-color: transparent;
+  .right-buffer {
+    margin-right: 25px;
+  }
+
+  .style-button {
+    color: @onboarding-next-button-color;
+    margin-right: 10px;
+    background-color: @onboarding-next-button-color-background;
     background-image: linear-gradient(to bottom, transparent, transparent);
     border-color: transparent transparent transparent;
   }
-  .btn.btn-default:hover {
-    color: @text-strong-color;
-    background-color: transparent;
+
+  .style-button:hover {
+    color: darken(@onboarding-next-button-color,10%);
+    background-color: darken(@onboarding-next-button-color-background,10%);
     background-image: linear-gradient(to bottom, transparent, transparent);
     border-color: transparent transparent transparent;
   }
@@ -2567,7 +2734,18 @@ form.editable-wrap .editable-controls input {
     padding-right: 0px;
   }
 
+  .steps-indicator {
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    left: 0;
+    margin: 0;
+    padding: 20px 0 0;
+    list-style: none;
+  }
+
   .glyphicon {
+    color: @onboarding-next-button-color;
     font-size: 18px;
     position: relative;
     top: 3px;
@@ -2578,6 +2756,42 @@ form.editable-wrap .editable-controls input {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+#container-select-app {
+  width: 100%;
+  height: 95%;
+  max-height: 90%;
+  min-height: 90%;
+  overflow: hidden;
+  background: @bg-on-bg-inverse-color;
+
+  .container-app-selection {
+    float: left;
+    min-height: 95%;
+    max-height: 95%;
+    min-width: 59%;
+    max-width: 59%;
+    padding-right: 40px;
+    padding-left: 25px;
+    overflow: auto;
+  }
+
+  .title {
+    font-weight: @onboarding-title-weight;
+    color: @onboarding-title-color; 
+    padding-left: 10px;
+  }
+
+  .container-data-sync {
+    float: right;
+    padding-right: 15px;
+    min-height: 75%;
+    min-width: 39%;
+    max-height: 75%;
+    max-width: 39%;
+    overflow: auto;
   }
 }
 
