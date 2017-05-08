@@ -52,6 +52,8 @@ en:
           discover: "Discover your account"
           next: "Next"
           finish: "Finish"
+          email_me: "Email me when ready"
+          take_me_to_the_account: "Take me to the account"
         select_your_app:
           app_logo: "{{app}} logo"
           select_application: "Step 1. Select the application you want to connect"

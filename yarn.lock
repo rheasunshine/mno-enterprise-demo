@@ -8,7 +8,7 @@
 
 "mno-enterprise-angular@git+https://git@github.com/hedudelgado/mno-enterprise-angular.git#onboarding-wizard":
   version "1.0.0"
-  resolved "git+https://git@github.com/hedudelgado/mno-enterprise-angular.git#acdb5294ff976dcf2c7efb7a5464e59cd191745f"
+  resolved "git+https://git@github.com/hedudelgado/mno-enterprise-angular.git#88d139b8bb7da51093970a9c51a40456f73061aa"
 
 "mnoe-admin-panel@git+https://git@github.com/maestrano/mnoe-admin-panel.git#master":
   version "1.0.0-rc.3"
