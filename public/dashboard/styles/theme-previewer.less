@@ -539,6 +539,11 @@ html, body {
 @onboarding-connect-apps-app-name-weight:                    bold;
 @onboarding-connect-apps-app-name-color:                     @decorator-main-color;
 
+ // Connect apps
+ //--------------------------------------
+ @onboarding-finish-button-color:             @decorator-main-color;
+ @onboarding-finish-button-color-background:  transparent;
+
 
 
 .font(@size, @weight, @color) {
@@ -1521,6 +1526,11 @@ mno-password {
   min-height: 80%;
   max-height: 80%;
   min-width: 90%;
+  
+  //  this bit overwrite the mno-ui-element css for a better app display
+  mno-widget > .widget > .body mno-widget-body:not(.no-padding) {
+    display: inline;
+  }
 
   .select-app-marketplace {
     width: 99%;
@@ -1531,6 +1541,29 @@ mno-password {
 
     .input-sm {
       color: @onboarding-select-app-marketplace-search;
+    }
+
+    .search-bar {
+      border-radius: 5px;
+      font-size: 13px;
+      height: 34px;
+      padding: 6px 12px;
+      margin-right: 10px;
+    }
+
+    input {
+      padding:10px;
+      font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+    }
+
+    input.empty {
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
     }
 
     .element-left {
@@ -1554,6 +1587,7 @@ mno-password {
       .app-icon {
         max-width: 120px;
         margin: 10px;
+        position: relative;
 
         .app-icon-wrapper {
           position: relative;
@@ -1578,8 +1612,14 @@ mno-password {
         }
 
         .info-btn{
+          border-radius: 60px;
+          box-shadow: 0px 0px 2px @onboarding-select-app-marketplace-tile-icon-color;
+          font-size: 10px;
           border: none;
           background-color: transparent;
+          position: absolute;
+          bottom: 12px;
+          right: -12px;
         }
                 
         .app-title {
@@ -2711,27 +2751,39 @@ form.editable-wrap .editable-controls input {
     }
   }
 
-  .right-buffer {
-    margin-right: 25px;
-  }
-
-  .style-button {
+  .style-button-next {
     color: @onboarding-next-button-color;
     margin-right: 10px;
     background-color: @onboarding-next-button-color-background;
     background-image: linear-gradient(to bottom, transparent, transparent);
-    border-color: transparent transparent transparent;
+    border-color: @onboarding-next-button-color;
+    box-shadow: 1px 1px;
   }
 
-  .style-button:hover {
+  .style-button-next:hover {
     color: darken(@onboarding-next-button-color,10%);
     background-color: darken(@onboarding-next-button-color-background,10%);
     background-image: linear-gradient(to bottom, transparent, transparent);
-    border-color: transparent transparent transparent;
+    border-color: @onboarding-next-button-color;
+    box-shadow: 1px 1px;
+
   }
 
-  .move-right {
-    padding-right: 0px;
+  .style-button-finish {
+    color: @onboarding-finish-button-color;
+    margin-right: 10px;
+    background-color: @onboarding-finish-button-color-background;
+    background-image: linear-gradient(to bottom, transparent, transparent);
+    border-color: @onboarding-finish-button-color;
+    box-shadow: 1px 1px;
+  }
+
+  .style-button-finish:hover {
+    color: darken(@onboarding-finish-button-color,10%);
+    background-color: darken(@onboarding-finish-button-color-background,10%);
+    background-image: linear-gradient(to bottom, transparent, transparent);
+    border-color: @onboarding-finish-button-color;
+    box-shadow: 1px 1px;
   }
 
   .steps-indicator {
@@ -2745,7 +2797,6 @@ form.editable-wrap .editable-controls input {
   }
 
   .glyphicon {
-    color: @onboarding-next-button-color;
     font-size: 18px;
     position: relative;
     top: 3px;
@@ -2756,6 +2807,9 @@ form.editable-wrap .editable-controls input {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  .glyphicon-menu-right {
+    color: @onboarding-next-button-color;
   }
 }
 
@@ -3074,7 +3128,10 @@ form.editable-wrap .editable-controls input {
   a {
     color: @text-inverse-strong-color;
   }
-
+  
+  .center-cross {
+    padding-right: 5px;
+  }
   .position-right-bottom-element {
     width: 20%;
     float: right;
